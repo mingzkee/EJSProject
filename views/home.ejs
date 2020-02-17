@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<%- include("partials/header"); -%>
+ 
+   
+    
+<h1> HOME</h1>
+
+<p><%= content%></p>
+
+        
+        <script src="" async defer></script>
+    <% posts.forEach(function(post){%>
+        <%console.log(post)%>
+        
+        <h1><%= post.title %></h1>
+        <p><%= post.content.substring(0,100)+" ..."%> 
+            
+           <a href="/posts/<%=post.title%>">ReadMore </a> 
+        
+        
+        
+        </p>
+        
+        <%})%>
+    <%- include("partials/footer"); -%>
+ 
+</html>
